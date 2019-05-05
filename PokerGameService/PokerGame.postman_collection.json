@@ -1,0 +1,454 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PokerGame",
+		"_postman_id": "0e014148-d146-e785-c4a5-fc77b4627adb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateDeck",
+			"request": {
+				"url": "http://localhost:8082/pokergame/deck",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ShuffleDeck",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8082/pokergame/deck?deckId=7090264b-78d0-468b-8880-4ddbce08925d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pokergame",
+						"deck"
+					],
+					"query": [
+						{
+							"key": "deckId",
+							"value": "7090264b-78d0-468b-8880-4ddbce08925d",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePlayer",
+			"request": {
+				"url": "http://localhost:8082/pokergame/player",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"email\":\"lis@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "listCards",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8082/pokergame/player/listCards?email=lis@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pokergame",
+						"player",
+						"listCards"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "lis@gmail.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\":\"sermendiarias@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "createGame",
+			"request": {
+				"url": "http://localhost:8082/pokergame/game",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteGame",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8082/pokergame/game?id=561f1787-e44a-4e1f-a253-28b2e6bfe771",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pokergame",
+						"game"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "561f1787-e44a-4e1f-a253-28b2e6bfe771",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\":\"sermendiarias@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveGame",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8082/pokergame/game?id=0250d51e-78fc-4150-98b1-a21eaabd7038",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pokergame",
+						"game"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0250d51e-78fc-4150-98b1-a21eaabd7038",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addDeckToTheGame",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8082/pokergame/game/b474082e-1f65-4d89-b26c-3abbfc62c12b/addDeck?deckId=7090264b-78d0-468b-8880-4ddbce08925d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pokergame",
+						"game",
+						"b474082e-1f65-4d89-b26c-3abbfc62c12b",
+						"addDeck"
+					],
+					"query": [
+						{
+							"key": "deckId",
+							"value": "7090264b-78d0-468b-8880-4ddbce08925d",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "removePlayer",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8082/pokergame/game/87c3a7f8-344f-4aa0-9454-b3d6133768d6/removePlayer?userId=sermendiarias@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pokergame",
+						"game",
+						"87c3a7f8-344f-4aa0-9454-b3d6133768d6",
+						"removePlayer"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "sermendiarias@gmail.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "dealCard",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8082/pokergame/game/b474082e-1f65-4d89-b26c-3abbfc62c12b/dealCard?userId=lis@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pokergame",
+						"game",
+						"b474082e-1f65-4d89-b26c-3abbfc62c12b",
+						"dealCard"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "lis@gmail.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addPlayerToGame",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8082/pokergame/game/b474082e-1f65-4d89-b26c-3abbfc62c12b/addPlayer?userId=lis@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"pokergame",
+						"game",
+						"b474082e-1f65-4d89-b26c-3abbfc62c12b",
+						"addPlayer"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "lis@gmail.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "listPlayerAndFilterByMajorHand",
+			"request": {
+				"url": "http://localhost:8082/pokergame/game/b474082e-1f65-4d89-b26c-3abbfc62c12b/listPlayerAndFilterByMajorHand",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "countCardsGroupItBySuit",
+			"request": {
+				"url": "http://localhost:8082/pokergame/game/b474082e-1f65-4d89-b26c-3abbfc62c12b/countCardsGroupItBySuit",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "countHowManyCardsExistsAndGroupItBySuit",
+			"request": {
+				"url": "http://localhost:8082/pokergame/game/b474082e-1f65-4d89-b26c-3abbfc62c12b/countHowManyCardsExistsAndGroupItBySuit",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
